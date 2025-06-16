@@ -1,0 +1,10 @@
+C:\Users\Main\Downloads\technical-test\backend-technical-test-nttdata-\src\main\java\com\nttdata\technica\test\api\ApiApplication.java
+C:\Users\Main\Downloads\technical-test\backend-technical-test-nttdata-\src\main\java\com\nttdata\technica\test\api\controller\ClientController.java
+C:\Users\Main\Downloads\technical-test\backend-technical-test-nttdata-\src\main\java\com\nttdata\technica\test\api\controller\TypeDocumentController.java
+C:\Users\Main\Downloads\technical-test\backend-technical-test-nttdata-\src\main\java\com\nttdata\technica\test\api\dto\ResponseClientDto.java
+C:\Users\Main\Downloads\technical-test\backend-technical-test-nttdata-\src\main\java\com\nttdata\technica\test\api\model\Client.java
+C:\Users\Main\Downloads\technical-test\backend-technical-test-nttdata-\src\main\java\com\nttdata\technica\test\api\model\TypeDocument.java
+C:\Users\Main\Downloads\technical-test\backend-technical-test-nttdata-\src\main\java\com\nttdata\technica\test\api\repository\ClienteRepository.java
+C:\Users\Main\Downloads\technical-test\backend-technical-test-nttdata-\src\main\java\com\nttdata\technica\test\api\repository\TypeDocumentRepository.java
+C:\Users\Main\Downloads\technical-test\backend-technical-test-nttdata-\src\main\java\com\nttdata\technica\test\api\service\ClienteService.java
+C:\Users\Main\Downloads\technical-test\backend-technical-test-nttdata-\src\main\java\com\nttdata\technica\test\api\service\TypeDocumentService.java

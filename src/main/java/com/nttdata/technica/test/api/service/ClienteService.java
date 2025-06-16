@@ -127,6 +127,51 @@ public class ClienteService {
     }
 
     /**
+     * Actualiza un cliente existente
+     * @param id ID del cliente a actualizar
+     * @param cliente Datos nuevos del cliente
+     * @return ResponseEntity<ResponseClientDto>
+     */
+    public ResponseEntity<?> update(Integer id, Client cliente) {
+        try {
+            Optional<Client> existingClient = clienteRepository.findById(id);
+            if (existingClient.isEmpty()) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+                    new ResponseClientDto(
+                        HttpStatus.NOT_FOUND.value(),
+                        "Cliente no encontrado",
+                        null)
+                );
+            }
+            // Copiar los datos del cliente recibido al existente
+            Client clientToUpdate = existingClient.get();
+            clientToUpdate.setIdentificacion(cliente.getIdentificacion());
+            clientToUpdate.setPrimerNombre(cliente.getPrimerNombre());
+            clientToUpdate.setSegundoNombre(cliente.getSegundoNombre());
+            clientToUpdate.setPrimerApellido(cliente.getPrimerApellido());
+            clientToUpdate.setSegundoApellido(cliente.getSegundoApellido());
+            clientToUpdate.setTelefono(cliente.getTelefono());
+            clientToUpdate.setDireccion(cliente.getDireccion());
+            clientToUpdate.setCiudadResidencia(cliente.getCiudadResidencia());
+            clientToUpdate.setTipoDocumento(cliente.getTipoDocumento());
+            ResponseClientDto responseClientDto = new ResponseClientDto(
+                HttpStatus.OK.value(),
+                "Cliente actualizado correctamente",
+                clienteRepository.save(clientToUpdate)
+            );
+            return ResponseEntity.status(HttpStatus.OK).body(responseClientDto);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
+                new ResponseClientDto(
+                    HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                    "Error",
+                    e.getMessage())
+            );
+        }
+    }
+
+    /**
      * Guarda un cliente
      * @param cliente
      * @return ResponseEntity<ResponseClientDto>

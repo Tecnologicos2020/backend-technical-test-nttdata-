@@ -1,0 +1,10 @@
+com\nttdata\technica\test\api\model\TypeDocument.class
+com\nttdata\technica\test\api\ApiApplication.class
+com\nttdata\technica\test\api\repository\TypeDocumentRepository.class
+com\nttdata\technica\test\api\model\Client.class
+com\nttdata\technica\test\api\dto\ResponseClientDto.class
+com\nttdata\technica\test\api\service\ClienteService.class
+com\nttdata\technica\test\api\controller\ClientController.class
+com\nttdata\technica\test\api\service\TypeDocumentService.class
+com\nttdata\technica\test\api\controller\TypeDocumentController.class
+com\nttdata\technica\test\api\repository\ClienteRepository.class

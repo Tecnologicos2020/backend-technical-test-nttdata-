@@ -13,31 +13,27 @@ Este proyecto es una API REST desarrollada con Spring Boot para la gestión de c
 ## Endpoints Principales
 
 ### Clientes
-- `GET /clientes` — Obtiene todos los clientes
-- `GET /clientes/{id}` — Obtiene un cliente por su ID
-- `POST /clientes` — Crea un nuevo cliente
-- `PUT /clientes/{id}` — Actualiza un cliente existente
-- `DELETE /clientes/{id}` — Elimina un cliente
+- `GET /api/client` — Obtiene todos los clientes
+- `GET /api/client/{id}` — Obtiene un cliente por su ID
+- `GET /api/client/{identification}/{tipoDocumento}` — Busca un cliente por identificación y tipo de documento
+- `POST /api/client` — Crea un nuevo cliente
 
 ### Tipos de Documento
-- `GET /tipos-documento` — Obtiene todos los tipos de documento
-- `GET /tipos-documento/{id}` — Obtiene un tipo de documento por ID
-- `POST /tipos-documento` — Crea un nuevo tipo de documento
-- `PUT /tipos-documento/{id}` — Actualiza un tipo de documento existente
-- `DELETE /tipos-documento/{id}` — Elimina un tipo de documento
+- `GET /api/tipo-documento` — Obtiene todos los tipos de documento
+- `GET /api/tipo-documento/{id}` — Obtiene un tipo de documento por ID
 
 ## Ejemplo de Entidad Cliente
 ```json
 {
-    "identificacion": "788888888",
-    "primerNombre": "JUAN",
-    "segundoNombre": "",
-    "primerApellido": "PEREZ",
-    "segundoApellido": "PEREZ",
-    "telefono": "3106146310",
-    "direccion": "CALLE 50 #89-20",
-    "ciudadResidencia": "BOGOTA D.C",
-    "tipoDocumento": 1
+    "identificacion":"23445322",
+    "primerNombre":"NTTDATA",
+    "segundoNombre":"NTTDATA",
+    "primerApellido":"NTTDATA",
+    "segundoApellido":"NTTDATA",
+    "telefono":"6017930303",
+    "direccion":"CALLE 50 #89-20",
+    "ciudadResidencia":"BOGOTA D.C",
+    "tipoDocumento":1
 }
 ```
 
@@ -45,6 +41,7 @@ Este proyecto es una API REST desarrollada con Spring Boot para la gestión de c
 - Java 17+
 - Spring Boot
 - Spring Data JPA
+- MySQL
 - Maven
 
 ## Ejecución Local
@@ -63,7 +60,7 @@ Este proyecto es una API REST desarrollada con Spring Boot para la gestión de c
    ```bash
    java -jar target/<nombre-del-jar>.jar
    ```
-5. Accede a la API en `http://localhost:8080`
+5. Accede a la API en https://api---nttdata-technical-test-jefdcgvyja-ew.a.run.app
 
 ## Notas
 - Configura la conexión a base de datos en `src/main/resources/application.properties`.
